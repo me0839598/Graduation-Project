@@ -1,0 +1,158 @@
+best estimator parameters BinaryRelevance(classifier=GaussianNB(), require_dense=[True, True])
+training data evaluation
+hamming score 0.2785171102661597
+hamming loss 0.3211952812713269
+              precision    recall  f1-score   support
+
+           0       0.54      0.27      0.36       978
+           1       0.07      0.98      0.13       361
+           2       0.30      0.92      0.45       357
+
+   micro avg       0.14      0.56      0.22      1696
+   macro avg       0.30      0.72      0.31      1696
+weighted avg       0.39      0.56      0.33      1696
+ samples avg       0.08      0.11      0.09      1696
+
+development data evaluation
+hamming score 0.6192626034612492
+hamming loss 0.15387509405568095
+              precision    recall  f1-score   support
+
+           0       0.50      0.02      0.05       124
+           1       0.06      0.37      0.10        35
+           2       0.13      0.05      0.07        43
+
+   micro avg       0.07      0.09      0.08       202
+   macro avg       0.23      0.15      0.07       202
+weighted avg       0.35      0.09      0.06       202
+ samples avg       0.02      0.02      0.02       202
+
+plot learning curve
+ones 861
+zeros 8916
+best estimator parameters BinaryRelevance(classifier=SVC(gamma=1, probability=True),
+                require_dense=[True, True])
+training data evaluation
+hamming score 0.7876572097104416
+hamming loss 0.08262649897630886
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00       978
+           1       0.00      0.00      0.00       361
+           2       0.00      0.00      0.00       357
+
+   micro avg       1.00      0.00      0.00      1696
+   macro avg       0.33      0.00      0.00      1696
+weighted avg       0.58      0.00      0.00      1696
+ samples avg       0.00      0.00      0.00      1696
+
+development data evaluation
+hamming score 0.8036117381489842
+hamming loss 0.07599699021820917
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       124
+           1       0.00      0.00      0.00        35
+           2       0.00      0.00      0.00        43
+
+   micro avg       0.00      0.00      0.00       202
+   macro avg       0.00      0.00      0.00       202
+weighted avg       0.00      0.00      0.00       202
+ samples avg       0.00      0.00      0.00       202
+
+plot learning curve
+ones 0
+zeros 9777
+best estimator parameters BinaryRelevance(classifier=KNeighborsClassifier(n_neighbors=9),
+                require_dense=[True, True])
+training data evaluation
+hamming score 0.7998196353709661
+hamming loss 0.07848298722823438
+              precision    recall  f1-score   support
+
+           0       0.67      0.14      0.23       978
+           1       0.92      0.03      0.06       361
+           2       0.69      0.03      0.05       357
+
+   micro avg       0.69      0.09      0.16      1696
+   macro avg       0.76      0.07      0.11      1696
+weighted avg       0.73      0.09      0.16      1696
+ samples avg       0.02      0.02      0.02      1696
+
+development data evaluation
+hamming score 0.8002257336343115
+hamming loss 0.07712565838976675
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       124
+           1       0.00      0.00      0.00        35
+           2       0.00      0.00      0.00        43
+
+   micro avg       0.00      0.00      0.00       202
+   macro avg       0.00      0.00      0.00       202
+weighted avg       0.00      0.00      0.00       202
+ samples avg       0.00      0.00      0.00       202
+
+plot learning curve
+ones 15
+zeros 9762
+best estimator parameters BinaryRelevance(classifier=LogisticRegression(C=50), require_dense=[True, True])
+training data evaluation
+hamming score 0.8041825095057035
+hamming loss 0.07667934093789606
+              precision    recall  f1-score   support
+
+           0       0.70      0.13      0.22       978
+           1       0.92      0.14      0.24       361
+           2       0.61      0.03      0.06       357
+
+   micro avg       0.74      0.11      0.19      1696
+   macro avg       0.75      0.10      0.17      1696
+weighted avg       0.73      0.11      0.19      1696
+ samples avg       0.03      0.03      0.03      1696
+
+development data evaluation
+hamming score 0.804176072234763
+hamming loss 0.07562076749435666
+              precision    recall  f1-score   support
+
+           0       1.00      0.01      0.02       124
+           1       1.00      0.03      0.06        35
+           2       0.00      0.00      0.00        43
+
+   micro avg       0.67      0.01      0.02       202
+   macro avg       0.67      0.01      0.02       202
+weighted avg       0.79      0.01      0.02       202
+ samples avg       0.00      0.00      0.00       202
+
+plot learning curve
+ones 20
+zeros 9757
+Avg ensemble technique hamming score: 0.830384127912645
+Avg ensemble technique hamming loss: 0.06634493516622794
+Avg ensemble classification matrix:               precision    recall  f1-score   support
+
+           0       0.88      0.20      0.32       978
+           1       0.80      0.30      0.44       361
+           2       0.87      0.29      0.44       357
+
+   micro avg       0.85      0.24      0.37      1696
+   macro avg       0.85      0.26      0.40      1696
+weighted avg       0.86      0.24      0.37      1696
+ samples avg       0.06      0.05      0.05      1696
+
+Avg ensemble technique hamming score: 0.8036117381489842
+Avg ensemble technique hamming loss: 0.0763732129420617
+Avg ensemble classification matrix:               precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       124
+           1       0.67      0.06      0.11        35
+           2       0.00      0.00      0.00        43
+
+   micro avg       0.40      0.01      0.02       202
+   macro avg       0.22      0.02      0.04       202
+weighted avg       0.12      0.01      0.02       202
+ samples avg       0.00      0.00      0.00       202
+
+ones 33
+zeros 9744

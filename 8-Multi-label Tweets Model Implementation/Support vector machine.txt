@@ -1,0 +1,49 @@
+best estimator parameters BinaryRelevance(classifier=SVC(gamma=1, probability=True),
+                require_dense=[True, True])
+training data evaluation
+hamming score 0.442553865652725
+hamming loss 0.14386184158047277
+              precision    recall  f1-score   support
+
+           0       0.79      0.65      0.71      2544
+           1       1.00      0.00      0.00       978
+           2       0.74      0.61      0.67      2602
+           3       0.90      0.40      0.55      1242
+           4       0.82      0.67      0.74      2477
+           5       0.86      0.13      0.23       700
+           6       0.77      0.43      0.55      1984
+           7       1.00      0.00      0.01       795
+           8       0.83      0.36      0.50      2008
+           9       0.00      0.00      0.00       361
+          10       0.00      0.00      0.00       357
+
+   micro avg       0.79      0.44      0.57     16048
+   macro avg       0.70      0.30      0.36     16048
+weighted avg       0.79      0.44      0.52     16048
+ samples avg       0.61      0.46      0.50     16048
+
+development data evaluation
+hamming score 0.35528592927012786
+hamming loss 0.16940283193104863
+              precision    recall  f1-score   support
+
+           0       0.72      0.62      0.67       315
+           1       0.00      0.00      0.00       124
+           2       0.69      0.58      0.63       319
+           3       0.69      0.20      0.31       121
+           4       0.86      0.53      0.65       400
+           5       0.43      0.02      0.04       132
+           6       0.74      0.27      0.40       307
+           7       0.00      0.00      0.00       100
+           8       0.79      0.25      0.38       265
+           9       0.00      0.00      0.00        35
+          10       0.00      0.00      0.00        43
+
+   micro avg       0.75      0.36      0.48      2161
+   macro avg       0.45      0.22      0.28      2161
+weighted avg       0.63      0.36      0.43      2161
+ samples avg       0.54      0.37      0.42      2161
+
+plot learning curve
+ones 3687
+zeros 32162

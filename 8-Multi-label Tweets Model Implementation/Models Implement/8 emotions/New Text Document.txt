@@ -1,0 +1,208 @@
+best estimator parameters BinaryRelevance(classifier=GaussianNB(), require_dense=[True, True])
+training data evaluation
+hamming score 0.4241425716235602
+hamming loss 0.33277274056741735
+              precision    recall  f1-score   support
+
+           0       0.55      0.91      0.68      2544
+           1       0.41      0.65      0.51       978
+           2       0.54      0.90      0.68      2602
+           3       0.36      0.96      0.52      1242
+           4       0.66      0.85      0.74      2477
+           5       0.40      0.89      0.55      2008
+           6       0.08      0.96      0.15       361
+           7       0.14      0.94      0.25       357
+
+   micro avg       0.40      0.88      0.55     12569
+   macro avg       0.39      0.88      0.51     12569
+weighted avg       0.49      0.88      0.62     12569
+ samples avg       0.44      0.84      0.54     12569
+
+development data evaluation
+hamming score 0.46720950231108244
+hamming loss 0.23631489841986456
+              precision    recall  f1-score   support
+
+           0       0.52      0.86      0.64       315
+           1       0.14      0.02      0.03       124
+           2       0.53      0.80      0.64       319
+           3       0.35      0.40      0.37       121
+           4       0.75      0.68      0.72       400
+           5       0.41      0.60      0.49       265
+           6       0.08      0.29      0.12        35
+           7       0.06      0.07      0.06        43
+
+   micro avg       0.49      0.63      0.55      1622
+   macro avg       0.35      0.46      0.38      1622
+weighted avg       0.50      0.63      0.54      1622
+ samples avg       0.56      0.63      0.55      1622
+
+plot learning curve
+ones 7776
+zeros 18296
+best estimator parameters BinaryRelevance(classifier=SVC(gamma=1, probability=True),
+                require_dense=[True, True])
+training data evaluation
+hamming score 0.5019060154041143
+hamming loss 0.14903846153846154
+              precision    recall  f1-score   support
+
+           0       0.78      0.65      0.71      2544
+           1       1.00      0.00      0.00       978
+           2       0.74      0.60      0.67      2602
+           3       0.89      0.39      0.54      1242
+           4       0.81      0.66      0.73      2477
+           5       0.81      0.34      0.48      2008
+           6       0.00      0.00      0.00       361
+           7       0.00      0.00      0.00       357
+
+   micro avg       0.79      0.48      0.60     12569
+   macro avg       0.63      0.33      0.39     12569
+weighted avg       0.77      0.48      0.56     12569
+ samples avg       0.61      0.50      0.53     12569
+
+development data evaluation
+hamming score 0.44576749435665913
+hamming loss 0.16295146726862303
+              precision    recall  f1-score   support
+
+           0       0.73      0.61      0.66       315
+           1       0.00      0.00      0.00       124
+           2       0.68      0.57      0.62       319
+           3       0.72      0.21      0.33       121
+           4       0.86      0.55      0.67       400
+           5       0.76      0.27      0.40       265
+           6       0.00      0.00      0.00        35
+           7       0.00      0.00      0.00        43
+
+   micro avg       0.75      0.43      0.55      1622
+   macro avg       0.47      0.28      0.34      1622
+weighted avg       0.67      0.43      0.51      1622
+ samples avg       0.55      0.46      0.48      1622
+
+plot learning curve
+ones 3182
+zeros 22890
+best estimator parameters BinaryRelevance(classifier=KNeighborsClassifier(n_neighbors=9),
+                require_dense=[True, True])
+training data evaluation
+hamming score 0.5311397094667056
+hamming loss 0.14682655747294532
+              precision    recall  f1-score   support
+
+           0       0.75      0.69      0.72      2544
+           1       0.68      0.15      0.25       978
+           2       0.73      0.67      0.70      2602
+           3       0.81      0.44      0.57      1242
+           4       0.78      0.69      0.73      2477
+           5       0.71      0.45      0.55      2008
+           6       0.71      0.06      0.10       361
+           7       0.56      0.03      0.05       357
+
+   micro avg       0.75      0.54      0.63     12569
+   macro avg       0.72      0.40      0.46     12569
+weighted avg       0.74      0.54      0.60     12569
+ samples avg       0.65      0.55      0.57     12569
+
+development data evaluation
+hamming score 0.4204288939051919
+hamming loss 0.1781884875846501
+              precision    recall  f1-score   support
+
+           0       0.63      0.63      0.63       315
+           1       1.00      0.01      0.02       124
+           2       0.63      0.63      0.63       319
+           3       0.70      0.21      0.33       121
+           4       0.82      0.50      0.62       400
+           5       0.58      0.25      0.35       265
+           6       0.00      0.00      0.00        35
+           7       0.00      0.00      0.00        43
+
+   micro avg       0.67      0.43      0.52      1622
+   macro avg       0.55      0.28      0.32      1622
+weighted avg       0.67      0.43      0.48      1622
+ samples avg       0.54      0.44      0.46      1622
+
+plot learning curve
+ones 3599
+zeros 22473
+best estimator parameters BinaryRelevance(classifier=LogisticRegression(C=50), require_dense=[True, True])
+training data evaluation
+hamming score 0.5608998732572877
+hamming loss 0.13353685288095934
+              precision    recall  f1-score   support
+
+           0       0.80      0.68      0.73      2544
+           1       0.72      0.19      0.30       978
+           2       0.75      0.65      0.69      2602
+           3       0.87      0.59      0.70      1242
+           4       0.82      0.72      0.77      2477
+           5       0.77      0.48      0.59      2008
+           6       0.87      0.17      0.29       361
+           7       0.61      0.03      0.06       357
+
+   micro avg       0.79      0.57      0.66     12569
+   macro avg       0.78      0.44      0.52     12569
+weighted avg       0.79      0.57      0.64     12569
+ samples avg       0.67      0.59      0.60     12569
+
+development data evaluation
+hamming score 0.47161399548532734
+hamming loss 0.15646162528216703
+              precision    recall  f1-score   support
+
+           0       0.76      0.57      0.65       315
+           1       0.57      0.03      0.06       124
+           2       0.72      0.51      0.60       319
+           3       0.73      0.29      0.41       121
+           4       0.85      0.63      0.72       400
+           5       0.72      0.36      0.48       265
+           6       1.00      0.03      0.06        35
+           7       0.00      0.00      0.00        43
+
+   micro avg       0.77      0.45      0.57      1622
+   macro avg       0.67      0.30      0.37      1622
+weighted avg       0.74      0.45      0.54      1622
+ samples avg       0.58      0.50      0.51      1622
+
+plot learning curve
+ones 3377
+zeros 22695
+Avg ensemble technique hamming score: 0.6191137759578824
+Avg ensemble technique hamming loss: 0.12893024276104123
+Avg ensemble classification matrix:               precision    recall  f1-score   support
+
+           0       0.72      0.82      0.77      2544
+           1       0.84      0.34      0.48       978
+           2       0.68      0.81      0.74      2602
+           3       0.80      0.70      0.75      1242
+           4       0.77      0.79      0.78      2477
+           5       0.66      0.70      0.68      2008
+           6       0.85      0.23      0.36       361
+           7       0.90      0.18      0.30       357
+
+   micro avg       0.72      0.71      0.72     12569
+   macro avg       0.78      0.57      0.61     12569
+weighted avg       0.74      0.71      0.70     12569
+ samples avg       0.71      0.70      0.68     12569
+
+Avg ensemble technique hamming score: 0.5006583897667419
+Avg ensemble technique hamming loss: 0.16337471783295712
+Avg ensemble classification matrix:               precision    recall  f1-score   support
+
+           0       0.63      0.75      0.69       315
+           1       0.00      0.00      0.00       124
+           2       0.63      0.72      0.67       319
+           3       0.71      0.32      0.44       121
+           4       0.87      0.63      0.73       400
+           5       0.61      0.40      0.48       265
+           6       0.50      0.03      0.05        35
+           7       0.00      0.00      0.00        43
+
+   micro avg       0.68      0.53      0.60      1622
+   macro avg       0.49      0.36      0.38      1622
+weighted avg       0.62      0.53      0.56      1622
+ samples avg       0.62      0.55      0.56      1622
+
+ones 4405
+zeros 21667

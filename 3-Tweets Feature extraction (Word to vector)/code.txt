@@ -1,0 +1,99 @@
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import os
+
+#load training data
+traindf=pd.read_csv('C:\\Users\\Mohamad\\Desktop\\vec\\freq_bi_tweets_training.csv',encoding='utf-8',sep=",")
+traindf.head(10)
+
+#initiate lists of emotions and word to vector distribution
+em=["anger","anticipation","disgust","fear","joy","love","optimism","pessimism","sadness","surprise","trust"]
+
+#load libraries
+import gensim 
+from gensim.models import Word2Vec 
+import nltk
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+from matplotlib import pyplot
+import warnings
+warnings.filterwarnings("ignore")
+
+def wrd2vec_model(x):
+    data =traindf[traindf[x]==1]["clean"].apply(lambda x: nltk.word_tokenize(x))
+    wrd2vec= gensim.models.Word2Vec(data, min_count = 1,size = 100, window = 5) 
+    wrd2vec.train(data,total_examples=len(data),epochs=6)
+    return wrd2vec
+
+#iterate over emotions and create word to vector model for each
+wrd2vec=[]
+for x in em:
+    wrd2vec.append(wrd2vec_model(x))
+    
+    #pca implementation function
+def pca_vectors(vectors,labels):
+    pca = PCA(n_components=2)
+    principalComponents = pca.fit_transform(vectors)
+    pca_df = pd.DataFrame(data = principalComponents, columns = ['PCA1', 'PCA2'])
+    pca_df ["vocab"]=labels
+    return pca_df
+
+#iterate over each emotion space and pca to each word to vector model 
+#save word to vector to pca vectors in wrd2vec_pca
+wrd2vec_pca=[]
+for i,e in enumerate(em):
+    wrd2vec_pca.append(pca_vectors(list(wrd2vec[i].wv.vectors),list(wrd2vec[i].wv.vocab.keys())))
+    
+#PCA to minimize 100 vector to visualize word to vector for each emotion space
+def pca_plot(i):
+    
+    pyplot.subplot(6,2,i+1)
+         
+    pca_df = wrd2vec_pca[i].head(20)
+    
+    pyplot.title("PCA "+em[i])
+    pyplot.scatter(pca_df["PCA1"],pca_df["PCA2"])
+    for i,val in pca_df.iterrows():
+        pyplot.annotate(val["vocab"],xy=(val["PCA1"],val["PCA2"]))
+        
+#iterate to plot top 20 word vectors for each emotion using PCA for dimensionality reduction
+pyplot.subplots(6, 2,figsize=(15,25))
+for i,e in enumerate(em):
+    pca_plot(i)
+
+pyplot.subplot(6,2,12)
+pyplot.axis("off")
+pyplot.show()
+
+# PCA to visualize word to vector for each two emotions spaces
+def pca_em_plot(i,j,z):
+    
+    pyplot.subplot(28,2,z)
+    pca_df = wrd2vec_pca[i].head(20)
+    pca_df2 = wrd2vec_pca[j].head(20)
+    
+    pyplot.title("PCA "+em[i]+" "+em[j])
+    pyplot.scatter(pca_df["PCA1"],pca_df["PCA2"],c='b')
+    pyplot.scatter(pca_df2["PCA1"],pca_df2["PCA2"],c='g')
+    
+    for x,val in pca_df.iterrows():
+        pyplot.annotate(val["vocab"],xy=(val["PCA1"],val["PCA2"]))
+    for x,val in pca_df2.iterrows():
+        pyplot.annotate(val["vocab"],xy=(val["PCA1"],val["PCA2"]))
+        
+    pyplot.legend([em[i],em[j]])
+    
+ #plot PCA to each two emotion spaces
+z=1
+pyplot.subplots(28, 2,figsize=(15,85))
+for i,e1 in enumerate(em):
+    for j,e2 in enumerate(em):
+        if(j>i):
+            pca_em_plot(i,j,z)
+            z=z+1
+pyplot.subplot(28,2,56)            
+pyplot.axis("off")
+pyplot.show()
+
+#save feature values to csv
+traindf.to_csv("wrd2vec_freq_bi_tweets.csv",index=False,encoding="utf-8")
